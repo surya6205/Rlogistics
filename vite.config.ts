@@ -1,11 +1,11 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
-import {VitePWA} from 'vite-plugin-pwa';
+import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig(() => {
-  const base = process.env.VITE_BASE || '/Mahaveer-Management-system/';
+  const base = process.env.VITE_BASE || '/Rlogistics/';
 
   return {
     base,
@@ -22,16 +22,16 @@ export default defineConfig(() => {
           'icon-maskable.svg'
         ],
         manifest: {
-          id: '/Mahaveer-Management-system/',
-          name: 'Mahaveer Management System',
-          short_name: 'Mahaveer',
-          description: 'Mahaveer Transport & Logistics Management System',
+          id: '/Rlogistics/',
+          name: 'RLogistics',
+          short_name: 'RLogistics',
+          description: 'RLogistics Management System',
           theme_color: '#0f172a',
           background_color: '#0f172a',
           display: 'standalone',
           orientation: 'any',
-          start_url: '/Mahaveer-Management-system/',
-          scope: '/Mahaveer-Management-system/',
+          start_url: '/Rlogistics/',
+          scope: '/Rlogistics/',
           categories: ['business', 'productivity', 'logistics'],
           icons: [
             {
@@ -92,10 +92,7 @@ export default defineConfig(() => {
       },
     },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
   };
