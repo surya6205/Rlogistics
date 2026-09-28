@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/Mahaveer-Management-system/dev-sw.js?dev-sw', { scope: '/Mahaveer-Management-system/', type: 'classic' })
